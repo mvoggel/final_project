@@ -27,19 +27,26 @@
 
 ### Files included:
 Pages  
+
 - index.jsp
 - login.jsp 
 - signup.jsp 
 - myjobs.jsp
 - alljobs.jsp
+
 Servlets 
+
 - LoginServlet 
 - SignUpServlet 
 - JobApplicationServlet (getting the jobs for myjobs.jsp page) 
 - JobListingServlet (getting ALL jobs for alljobs.jsp)
+
 DB 
+
 - MySQLdb (select statements and logic to pull from the db)
+
 Models 
+
 - UserModel 
 - JobModel
 - ApplicationModel
