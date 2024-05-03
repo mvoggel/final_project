@@ -8,28 +8,37 @@
   - Sign up if you do not have an existing user_id in our system (as well as username, password)
   - Visit our homepage to pick your path 
 
--Login yes (HAS a login) (login.jsp) -> calls LoginServlet -> if success, goes to myjobs.jsp (homepage). This shows all their applied to jobs (jobs in the database that have an "isApplied" value of "1")
+### Implementations
+- We implemented our database tables and schemas for the final application, populating both our user and jobs tables with dummy content in order to be referenced/tested in our application. For this we used MySQL Workbench, and successfully connected it in Intellij
+- Login experience - includes our login.jsp, LoginServlet, UserModel, MySQLdb methods
+- Sign up experience - includes our signup.jsp, SignUpServlet, UserModel, MySQLdb methods
+- Job Application experience - includes our myjobs.jsp and alljobs.jsp, UserModel, JobModel, ApplicationModel, JobApplicationServlet, JobListingServlet, MySQLdb methods
+  - myjobs experience shows all jobs appliedTo for a given user_id, indicated in our database in the jobs table with a 0 or 1 (0 being no, 1 being yes), if it's a yes, then it will list that job under the myjobs page
+  - alljobs experience shows ALL jobs. There is a button on each job, and an action setuop that calls our Servlets and models to trigger the change in our database, that will then send this listing to that users myjobs.jsp page
 
-- Login no (NEW login) (signup.jsp) -> calls SignUpServlet via the UserModel and creates a new one, brings them then to myjobs.jsp (will assign a user id)
 
-To "apply" to a job, go to "alljobs.jsp" which calls JobListingServlet (maybe JobListingModel too) to just bring in ALL jobs that exist, there should be a button on each one that says "Add" on it, which will flip it in our db to a "1" as it defaults to "0" which we're calling "not applied." It should show ones that have been clicked, which is the trigger to bring it to the main alljobs.jsp page, but once clicked, should populate in your myjobs.jsp page 
+### Future Enhancements 
+- While we have provided our technical outline, there were some issues that arose that will become future enhancements to the application
+- Our Servlet handling and reference was not properly resolving after due diligence to setup our web.xml, and servlet class inclusion in the application build
+  - This made our steps beyond our login and signup features not work as expected - an ongoing bug we are determined to fix beyond the scope of the assignment
+- Implement full css design for homepage, myjobs and alljobs jsp page once access is granted
+- 
 
-Pages needed 
+### Files included:
+Pages  
 - index.jsp
 - login.jsp 
 - signup.jsp 
-- myjobs.jsp (home for prospects) 
-- alljobs.jsp (listing of all the jobs) 
-Servlets needed
+- myjobs.jsp
+- alljobs.jsp
+Servlets 
 - LoginServlet 
 - SignUpServlet 
 - JobApplicationServlet (getting the jobs for myjobs.jsp page) 
 - JobListingServlet (getting ALL jobs for alljobs.jsp)
-
 DB 
 - MySQLdb (select statements and logic to pull from the db)
-
-Models needed
-- UserModel (outlines user id and information) 
+Models 
+- UserModel 
 - JobModel
-- ApplicationModel (not sure what we'll need here, but maybe this is easier to split JobModel, UserModel, into 2 parts to separate onto a page where a user's applied jobs live?) 
+- ApplicationModel
