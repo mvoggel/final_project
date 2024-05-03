@@ -7,7 +7,7 @@
   - Navigate to the full list of open jobs (pulled from the database), where you can further apply
   - Sign up if you do not have an existing user_id in our system (as well as username, password)
   - Visit our homepage to pick your path
-Walkthrough video can be found [here](url)
+Walkthrough video can be found [here](https://www.youtube.com/watch?v=wFjNO3D8LYk)
 
 ### Implementations
 - We implemented our database tables and schemas for the final application, populating both our user and jobs tables with dummy content in order to be referenced/tested in our application. For this we used MySQL Workbench, and successfully connected it in Intellij
