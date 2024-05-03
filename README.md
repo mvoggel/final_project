@@ -10,11 +10,12 @@
 
 ### Implementations
 - We implemented our database tables and schemas for the final application, populating both our user and jobs tables with dummy content in order to be referenced/tested in our application. For this we used MySQL Workbench, and successfully connected it in Intellij
-- Login experience - includes our login.jsp, LoginServlet, UserModel, MySQLdb methods
-- Sign up experience - includes our signup.jsp, SignUpServlet, UserModel, MySQLdb methods
+- Our application builds on a Tomcat Server, using a Java EE profile, that was exploded locally in our browser in order to simulate the site. With this final project submission is a video showcasing what we have fully implemented.
+- Login experience - includes our login.jsp, calls our LoginServlet upon submission, references UserModel, MySQLdb methods
+- Sign up experience - includes our signup.jsp, calls our SignUpServlet upon submission, references UserModel, MySQLdb methods, and creates a new instance of a user if it didn't formerly exist
 - Job Application experience - includes our myjobs.jsp and alljobs.jsp, UserModel, JobModel, ApplicationModel, JobApplicationServlet, JobListingServlet, MySQLdb methods
   - myjobs experience shows all jobs appliedTo for a given user_id, indicated in our database in the jobs table with a 0 or 1 (0 being no, 1 being yes), if it's a yes, then it will list that job under the myjobs page
-  - alljobs experience shows ALL jobs. There is a button on each job, and an action setuop that calls our Servlets and models to trigger the change in our database, that will then send this listing to that users myjobs.jsp page
+  - alljobs experience shows ALL jobs. There is a button on each job, and an action setup that calls our Servlets and models to trigger the change in our database, that will then send this listing to that users myjobs.jsp page
 
 
 ### Future Enhancements 
@@ -22,7 +23,7 @@
 - Our Servlet handling and reference was not properly resolving after due diligence to setup our web.xml, and servlet class inclusion in the application build
   - This made our steps beyond our login and signup features not work as expected - an ongoing bug we are determined to fix beyond the scope of the assignment
 - Implement full css design for homepage, myjobs and alljobs jsp page once access is granted
-- 
+
 
 ### Files included:
 Pages  
